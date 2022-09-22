@@ -5,7 +5,7 @@ export const TagStyled = styled.div`
   height: 150px;
   position: fixed;
   left: 10px;
-  z-index: 2;
+  z-index: 100;
   div:nth-child(1) {
     background-image: url("logo.jpg");
     background-position: center;

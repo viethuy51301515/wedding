@@ -6,6 +6,8 @@ import CountDown from "./countdown/countdown";
 import Timeline from "./timeline/Timeline";
 import Event from "./events/Event";
 import PictureFrame from "./pictureFrame/PictureFrame";
+import Gallery from "./gallery/Gallery";
+import Story from "./story/Story";
 export {
   Header,
   Footer,
@@ -15,4 +17,6 @@ export {
   Timeline,
   Event,
   PictureFrame,
+  Gallery,
+  Story,
 };

@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const EventStyled = styled.div`
-  background-image: url("bg.jpg");
+  background-image: url("background.png");
   padding: 120px 0;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 `;
 export const EventItem = styled.div`

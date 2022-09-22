@@ -3,9 +3,11 @@ import {
   CountDown,
   Event,
   Footer,
+  Gallery,
   Header,
   PictureFrame,
   Portfolio,
+  Story,
   Tag,
   Timeline,
 } from "./components";
@@ -18,10 +20,12 @@ function App() {
         <Tag />
         <Header />
         <Portfolio />
-        {/* <CountDown />
+        <CountDown />
 
         <Event />
-        <CountDown />
+        <Gallery />
+        <Story />
+        {/* <CountDown />
         <Footer />
         <Modal /> */}
       </ModalProvider>
