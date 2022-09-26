@@ -7,6 +7,7 @@ export const StoryContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  flex-wrap: wrap;
   .story-content-2 {
     height: 400px;
     width: 550px;
@@ -16,11 +17,17 @@ export const StoryContainer = styled.div`
 export const StoryImageSlider = styled.div`
   background-size: cover;
   background-position: center;
-  background-image: url("background2.jpg");
+  background-image: url("${(props) => props.imageSrc}");
   height: 400px;
   width: 550px;
   position: relative;
   transform-style: preserve-3d;
+  flex-shrink: 1;
+  transition: all 0.5s ease;
+  @media (max-width: 768px) {
+    margin: 0 50px;
+    transform: scale(1, 0.8);
+  }
   &:before {
     content: " ";
     background-size: cover;
@@ -68,8 +75,21 @@ export const StoryImageContent = styled.div`
   transform: translateY(-50%);
   left: -40px;
   background-color: rgba(255, 255, 255, 1);
+  width:500px;
+
+  @media only screen and (max-width: 1116px){
+    width:unset;
+    top:0;
+    left:60px;
+    right:60px;
+    transform: translate(0,-30%);
+  }
   > div:nth-child(1) {
     padding: 50px;
+    width: 100%;
+    height:300px;
+    box-sizing: border-box;
+    transition: all 0.5s ease;
     p {
       color: rgba(37, 25, 16, 1);
       line-height: 1.8;
@@ -151,4 +171,5 @@ export const StoryImageContent = styled.div`
     transform:translate(100%,50%);
     cursor:pointer;
   }
+  
 `;

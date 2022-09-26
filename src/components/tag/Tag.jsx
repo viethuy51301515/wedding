@@ -1,12 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { TagStyled } from "./Tag.styled";
 
 const Tag = () => {
+  const scrollTop =()=>{
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
   return (
-    <TagStyled>
-      <div></div>
-      <div></div>
-    </TagStyled>
+    <Link to={"/"} onClick={scrollTop}>
+      <TagStyled>
+        <div></div>
+        <div></div>
+      </TagStyled>
+    </Link>
   );
 };
 

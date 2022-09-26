@@ -1,3 +1,4 @@
+import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./App.css";
 import {
   CountDown,
@@ -5,31 +6,40 @@ import {
   Footer,
   Gallery,
   Header,
-  PictureFrame,
   Portfolio,
   Story,
   Tag,
-  Timeline,
 } from "./components";
 import { ModalProvider } from "./components/context/modalContext";
-import Modal from "./components/modal/Modal";
+import Album from "./pages/Album";
+import Destination from "./pages/Destination";
+const Wrapper = () => {
+  return (
+    <ModalProvider>
+      <Tag />
+      <Header />
+      <Portfolio />
+      <CountDown />
+
+      <Event />
+      <Gallery />
+      <Story />
+
+      <Footer />
+    </ModalProvider>
+  );
+};
 function App() {
   return (
-    <div className="wrapper">
-      <ModalProvider>
-        <Tag />
-        <Header />
-        <Portfolio />
-        <CountDown />
-
-        <Event />
-        <Gallery />
-        <Story />
-        {/* <CountDown />
-        <Footer />
-        <Modal /> */}
-      </ModalProvider>
-    </div>
+    <BrowserRouter>
+      <div className="wrapper">
+        <Routes>
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/album" element={<Album />} />
+          <Route path="/" exact element={<Wrapper />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

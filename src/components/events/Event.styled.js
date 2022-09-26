@@ -47,7 +47,7 @@ export const EventItemImage = styled.div`
   top: 10%;
   z-index: 1;
   > div {
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;

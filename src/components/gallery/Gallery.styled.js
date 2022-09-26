@@ -10,8 +10,9 @@ export const GalleryStyled = styled.div`
   gap: 20px;
   position: relative;
   padding: 30px 0;
-  > div {
+  .gallery-card {
     flex-grow: 0;
+    transition: 0.3s all ease;
   }
   :before {
     content: " ";
@@ -21,9 +22,12 @@ export const GalleryStyled = styled.div`
     height: 30%;
     background-color: rgba(108, 134, 133, 1);
   }
-  > div:nth-child(1) {
+  .gallery-card__1 {
     rotate: 356deg;
     position: relative;
+    :hover {
+      rotate: 360deg;
+    }
     &:before {
       content: " ";
       background-size: cover;
@@ -39,13 +43,19 @@ export const GalleryStyled = styled.div`
       height: 120px;
     }
   }
-  > div:nth-child(2) {
+  .gallery-card__2 {
     rotate: 1deg;
+    :hover {
+      rotate: 0deg;
+    }
   }
-  > div:nth-child(3) {
+  .gallery-card__3 {
     rotate: -6deg;
     z-index: 2;
     transform-style: preserve-3d;
+    :hover {
+      rotate: 0deg;
+    }
     &:before {
       content: " ";
       background-size: cover;
@@ -62,7 +72,7 @@ export const GalleryStyled = styled.div`
       transform: translateZ(-1px);
     }
   }
-  > div:nth-child(4) {
+  .gallery-card__4 {
     rotate: 90deg;
     h1 {
       line-height: 1.2;

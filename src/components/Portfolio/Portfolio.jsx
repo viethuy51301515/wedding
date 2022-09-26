@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import {throttle} from 'lodash';
 import {
   PortfolioStyled,
   InforStyled,
@@ -15,27 +16,18 @@ import {AnimatePresence, motion} from 'framer-motion';
 import { gsap } from "gsap";
 import { useState } from "react";
 import PictureFrame from "../pictureFrame/PictureFrame";
+
 const Portfolio = () => {
-  const [[page,direction],setPage] = useState([0,0]);
-
-
-  useEffect(() => {
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".contain",
-          start: "top 100px",
-          end: "bottom top",
-        },
-      })
-      .fromTo(
-        ".profile-image",
-        1,
-        { opacity: 0, right: "45%" },
-        { opacity: 1, right: "50%" }
-      );
-  }, []);
-
+  const ref = useRef();
+  const [currentWidth,setCurrentWidth] = useState(window.innerWidth);
+  // useEffect(() => {
+  //   document.getElementById("note-content-id").style.scale = window.innerWidth/window.screen.width;
+  // }, []);
+  // function handleResize() {
+  //   console.log(document.getElementById("note-content-id").offsetWidth,window.innerWidth);
+  //    document.getElementById("note-content-id").style.scale = window.innerWidth/window.screen.width;
+  // }
+  // window.addEventListener('resize', throttle(handleResize,500))
   return (
     <PortfolioContainer>
         <PortfolioStyled className="contain">
@@ -55,20 +47,21 @@ const Portfolio = () => {
             
             </PortfolioTop>
             <PortfolioBottom>
-              <div className="note-content">
-              <div className="note-1">
-                <h1>my style and approach is far from ordinary... </h1>
-                <p>
-                It's not traditional. It's not posed. It's not staged. It thrives on movement, connection, and emotion. I always like to get to know each of my couples on a deeper, more personal level so, that when you do step in front of my camera for the first time... you know me, you trust me, you feel comfortable with me... so much so that letting me into your lives, your story, and your love comes easy and naturally.
-                </p>
-              </div>
-              <div className="note-2">
-
-              </div>
-              <div className="note-3">
-
-              </div>
-              </div>
+                <div className="note-1-container"> 
+                  <div className="note-1">
+                    <h1>my style and approach is far from ordinary... </h1>
+                    <p>
+                    It's not traditional. It's not posed. It's not staged. It thrives on movement, connection, and emotion. I always like to get to know each of my couples on a deeper, more personal level so, that when you do step in front of my camera for the first time... you know me, you trust me, you feel comfortable with me... so much so that letting me into your lives, your story, and your love comes easy and naturally.
+                    </p>
+                  </div>
+                </div>
+                <div className="note-2-container">
+                  <div className="note-2" />
+                </div>
+                <div className="note-3-container">              
+                  <div className="note-3"/>
+                  <div className="ink1" />
+                </div>
             </PortfolioBottom>
         </PortfolioStyled>
     </PortfolioContainer>

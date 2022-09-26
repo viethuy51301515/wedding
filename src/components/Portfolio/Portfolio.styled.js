@@ -16,16 +16,19 @@ export const PortfolioTop = styled.div`
   position: relative;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
   > div:nth-child(1) {
     position: relative;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
+    top: -45px;
+    z-index: 3;
+    @media only screen and (max-width: 768px) {
+      top: -100px;
+    }
     .profile {
       width: 100%;
       height: 100%;
       position: absolute;
-      top: -45px;
       z-index: 2;
       transform-style: preserve-3d;
       &:before {
@@ -44,13 +47,13 @@ export const PortfolioTop = styled.div`
   }
   > div:nth-child(2) {
     width: 600px;
-    margin-top: 50px;
+    margin: 50px 30px;
     position: relative;
     h1 {
       color: rgba(37, 25, 16, 1);
       line-height: 1.2;
       letter-spacing: 0em;
-      font-size: 36px;
+      font-size: 30px;
       text-align: left;
       font-weight: 400;
       font-style: normal;
@@ -60,7 +63,7 @@ export const PortfolioTop = styled.div`
       color: rgba(37, 25, 16, 1);
       line-height: 1.8;
       letter-spacing: 0em;
-      font-size: 20px;
+      font-size: 18px;
       text-align: justify;
       font-weight: 400;
       font-style: normal;
@@ -77,27 +80,56 @@ export const PortfolioTop = styled.div`
       transform: rotate(10deg);
       right: -80px;
       top: 80px;
+      @media only screen and (max-width: 768px) {
+        opacity: 0.5;
+      }
     }
   }
 `;
 export const PortfolioBottom = styled.div`
-  height: 500px;
-  max-height: 100vh;
-  display: flex;
-  justify-content: center;
-  .note-content {
+  display: grid;
+  width: 100%;
+  padding-bottom: 60px;
+  grid-template-areas: "note1 note2 note3";
+  @media only screen and (max-width: 1270px) {
+    grid-template-areas:
+      "note2 note3"
+      "note1 note1";
+  }
+  .note-1-container {
     position: relative;
+    margin-left: 20px;
+    height: 450px;
+    grid-area: note1;
+    @media only screen and (max-width: 1270px) {
+      margin-left: 0;
+    }
+  }
+  .note-2-container {
+    position: relative;
+
+    height: 450px;
+    grid-area: note2;
+    @media only screen and (max-width: 1270px) {
+      margin-left: 20px;
+    }
+  }
+  .note-3-container {
+    margin-right: 20px;
+    position: relative;
+
+    height: 450px;
+    grid-area: note3;
   }
   .note-1 {
     background-size: cover;
     background-position: center;
     background-image: url("paper.png");
-    width: 400px;
+    width: 100%;
     padding: 40px;
     position: absolute;
-    left: -350px;
     top: 5%;
-    transform: translateX(-50%);
+    left: 0;
     z-index: 2;
     h1 {
       color: rgba(37, 25, 16, 1);
@@ -109,6 +141,9 @@ export const PortfolioBottom = styled.div`
       font-style: normal;
       rotate: -3deg;
       margin-bottom: 20px;
+      @media only screen and (max-width: 1270px) {
+        rotate: -7deg;
+      }
     }
     p {
       font-family: "Libre Baskerville", serif;
@@ -120,29 +155,30 @@ export const PortfolioBottom = styled.div`
       font-weight: 400;
       font-style: normal;
       rotate: -1deg;
+      @media only screen and (max-width: 1270px) {
+        rotate: -7deg;
+      }
     }
   }
   .note-2 {
     position: absolute;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-image: url("background.jpg");
+    z-index: 2;
     left: 0;
-    transform: translateX(-50%);
   }
   .note-3 {
     position: absolute;
-    width: 300px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-image: url("background2.jpg");
     z-index: 2;
     top: 8%;
-    left: 250px;
-    transform: translateX(-50%);
     &:before {
       content: " ";
       background-size: cover;
@@ -164,10 +200,27 @@ export const PortfolioBottom = styled.div`
       position: absolute;
       left: 0;
       top: 0;
-      transform: translateX(-50%);
+      transform: translateX(30%);
+      rotate: 180deg;
       bottom: 15px;
       width: 15px;
       height: 450px;
+    }
+  }
+  .ink1 {
+    background-size: cover;
+    background-position: center;
+    background-image: url("ink_splatters-01.png");
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    left: -100px;
+    bottom: -100px;
+    z-index: 1;
+    rotate: 21deg;
+    @media only screen and (max-width: 1270px) {
+      left: 0px;
+      bottom: 84%;
     }
   }
 `;

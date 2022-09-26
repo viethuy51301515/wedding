@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { getRatio } from "../../utils/animation";
 
-const Header = () => {
+const Header = ({title,content,imageUrl}) => {
   gsap.registerPlugin(ScrollTrigger);
   let ref = useRef(null);
 
