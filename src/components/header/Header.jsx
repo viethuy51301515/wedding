@@ -3,10 +3,9 @@ import { HeaderContent, HeaderImage, HeaderStyled } from "./Header.styled";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { getRatio } from "../../utils/animation";
-
 const Header = ({title,content,imageUrl}) => {
   gsap.registerPlugin(ScrollTrigger);
-  let ref = useRef(null);
+  let refBack = useRef(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -16,7 +15,7 @@ const Header = ({title,content,imageUrl}) => {
       },
       {
         backgroundPosition: () =>
-          `50% ${window.innerHeight * (1 - getRatio(ref.current))}px`,
+          `50% ${window.innerHeight * (1 - getRatio(refBack.current))}px`,
         ease: "none",
         scrollTrigger: {
           trigger: "#header",
@@ -29,8 +28,8 @@ const Header = ({title,content,imageUrl}) => {
     );
   }, []);
   return (
-    <HeaderStyled id="header" ref={ref}>
-      <HeaderImage id="background"></HeaderImage>
+    <HeaderStyled id="header" ref={refBack}>
+      <HeaderImage id="background" backgroundImg={imageUrl}></HeaderImage>
       <HeaderContent id="content">
         <div>
           <h1>ALISABETH DESIGNS</h1>

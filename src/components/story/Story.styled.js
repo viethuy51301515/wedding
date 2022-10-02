@@ -99,6 +99,7 @@ export const StoryImageContent = styled.div`
       font-family: "Libre Baskerville", serif;
       font-weight: 400;
       font-style: normal;
+      margin:0;
     }
     h3 {
       color: rgba(37, 25, 16, 1);
@@ -111,6 +112,7 @@ export const StoryImageContent = styled.div`
       font-weight: 400;
       font-style: normal;
       text-align: right;
+      margin: 0;
     }
   }
   > div:nth-child(2) {

@@ -6,15 +6,24 @@ export const AboutStyed = styled.div`
   display: grid;
   grid-template-areas: ". left-content right-content";
   padding: 100px 50px 100px 300px;
+  @media (max-width: 768px) {
+    grid-template-areas:
+      "image-content"
+      "left-content"
+      "right-content";
+    padding: 50px;
+  }
   .about__content {
     position: relative;
     z-index: 3;
   }
   .about__content:nth-child(1) {
     display: flex;
-    grid-area: "left-content";
-
+    grid-area: left-content;
     justify-content: flex-end;
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
     h1 {
       color: rgba(255, 255, 255, 1);
       font-size: 28px;
@@ -34,7 +43,7 @@ export const AboutStyed = styled.div`
     }
   }
   .about__content:nth-child(2) {
-    grid-area: "right-content";
+    grid-area: right-content;
     p {
       line-height: 1.8;
       letter-spacing: 0em;
@@ -50,7 +59,8 @@ export const AboutStyed = styled.div`
 `;
 
 export const AboutImageStyled = styled.div`
-  background-image: url("background2.jpg");
+  background-image: url("${(props) => props.backgroundImg}");
+
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -61,6 +71,10 @@ export const AboutImageStyled = styled.div`
   z-index: 2;
   rotate: -2deg;
   transform-style: preserve-3d;
+  @media (max-width: 768px) {
+    grid-area: image-content;
+    position: relative;
+  }
   &:before {
     content: " ";
     background-size: cover;

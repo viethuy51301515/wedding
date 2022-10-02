@@ -1,39 +1,21 @@
-import React, { useEffect, useRef } from "react";
-import {throttle} from 'lodash';
+import React from "react";
 import {
   PortfolioStyled,
-  InforStyled,
-  InforContent,
-  InforImage,
-  NextPrevButton,
   PortfolioContainer,
-  NextButton,
-  PrevButton,
   PortfolioTop,
   PortfolioBottom,
 } from "./Portfolio.styled";
-import {AnimatePresence, motion} from 'framer-motion';
-import { gsap } from "gsap";
-import { useState } from "react";
 import PictureFrame from "../pictureFrame/PictureFrame";
+import { useSelector } from "react-redux";
 
 const Portfolio = () => {
-  const ref = useRef();
-  const [currentWidth,setCurrentWidth] = useState(window.innerWidth);
-  // useEffect(() => {
-  //   document.getElementById("note-content-id").style.scale = window.innerWidth/window.screen.width;
-  // }, []);
-  // function handleResize() {
-  //   console.log(document.getElementById("note-content-id").offsetWidth,window.innerWidth);
-  //    document.getElementById("note-content-id").style.scale = window.innerWidth/window.screen.width;
-  // }
-  // window.addEventListener('resize', throttle(handleResize,500))
+  const about = useSelector(state => state.about);
   return (
     <PortfolioContainer>
         <PortfolioStyled className="contain">
             <PortfolioTop>
               <div>
-                  <PictureFrame className='profile'/>
+                  <PictureFrame className='profile' backgroundImg={about[0]}/>
               </div>
               <div>
                 <h1>
@@ -56,10 +38,10 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className="note-2-container">
-                  <div className="note-2" />
+                  <div className="note-2" style={{backgroundImage:`url(${about[1]})`}} />
                 </div>
                 <div className="note-3-container">              
-                  <div className="note-3"/>
+                  <div className="note-3" style={{backgroundImage:`url(${about[2]})`}} />
                   <div className="ink1" />
                 </div>
             </PortfolioBottom>

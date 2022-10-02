@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const HeaderStyled = styled.div`
   color: white;
@@ -12,7 +12,7 @@ export const HeaderStyled = styled.div`
 `;
 
 export const HeaderImage = styled.div`
-  background-image: url("background.jpg");
+  background-image: url("${(props) => props.backgroundImg}");
   opacity: 0.4;
   background-size: cover;
   background-position: center;
@@ -25,7 +25,6 @@ export const HeaderImage = styled.div`
 `;
 
 export const HeaderContent = styled.div`
-  color: white;
   text-shadow: 1px 1px 3px black;
   z-index: 1;
   text-align: center;
@@ -34,5 +33,9 @@ export const HeaderContent = styled.div`
     font-size: 65px;
     font-weight: 400;
     font-style: normal;
+    color: white;
+  }
+  h2 {
+    color: white;
   }
 `;

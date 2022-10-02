@@ -1,51 +1,44 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { useModalContext } from "../context/modalContext";
 import ClickMe from "./ClickMe";
 import { EventItem, EventItemContent, EventItemImage, EventStyled } from "./Event.styled";
 
 const Event = () => {
-  const {showModal} = useModalContext();
-  const openPreWedding = ()=>{
-    showModal("REGISTER_PRE_WEDDING");
-  }
-  const openForm = ()=>{
-    showModal("WEDDING");
-  }
+  const placesImages = useSelector(state => state.places);
+  const data = [
+    {
+      name:"",
+      url:"prewedding",
+      image:placesImages['prewedding'][0],
+    },
+    {
+      name:"",
+      url:"ceremony",
+      image:placesImages['ceremony'][0],
+    }, 
+    {
+      name:"",
+      url:"wedding",
+      image:placesImages['wedding'][0],
+    }
+  ]
   return <EventStyled>
-    <Link to="/destination?pre_wedding">
-        <EventItem>
-          <ClickMe />
-          <EventItemImage>
-            <div>
-              <div className="event-image"></div>
-            </div>
-          </EventItemImage>
-          <EventItemContent>
-            <img src="/title.png" alt='profile'/> 
-          </EventItemContent>
-        </EventItem>
-      </Link>
-      <EventItem onClick={openForm}>
-        <EventItemImage>
-          <div>
-            <div className="event-image"></div>
-          </div>
-        </EventItemImage>
-        <EventItemContent>
-          <img src="/title.png" alt='profile'/> 
-        </EventItemContent>
-      </EventItem>
-      <EventItem>
-        <EventItemImage>
-          <div>
-            <div className="event-image"></div>
-          </div>
-        </EventItemImage>
-        <EventItemContent>
-          <img src="/title.png" alt='profile'/> 
-        </EventItemContent>
-      </EventItem>
+          {data.map(item => 
+              <Link to={`/destination/${item.url}`} style={{pointerEvents:item.url !== "prewedding" && "none"}}>
+                <EventItem>
+                  { item.url === "prewedding"  && <ClickMe />}
+                  <EventItemImage>
+                    <div>
+                      <div className="event-image" style={{backgroundImage:`url(${item.image})`}}></div>
+                    </div>
+                  </EventItemImage>
+                  <EventItemContent>
+                    <img src="/title.png" alt='profile'/> 
+                  </EventItemContent>
+                </EventItem>
+              </Link>
+          )}
       </EventStyled>;
 };
 

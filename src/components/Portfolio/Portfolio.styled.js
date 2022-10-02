@@ -96,6 +96,11 @@ export const PortfolioBottom = styled.div`
       "note2 note3"
       "note1 note1";
   }
+  @media only screen and (max-width: 768px) {
+    grid-template-areas:
+      "note2 note3"
+      "note1 note1";
+  }
   .note-1-container {
     position: relative;
     margin-left: 20px;
@@ -103,6 +108,11 @@ export const PortfolioBottom = styled.div`
     grid-area: note1;
     @media only screen and (max-width: 1270px) {
       margin-left: 0;
+      max-height: 300px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-left: 0;
+      max-height: 450px;
     }
   }
   .note-2-container {
@@ -141,7 +151,7 @@ export const PortfolioBottom = styled.div`
       font-style: normal;
       rotate: -3deg;
       margin-bottom: 20px;
-      @media only screen and (max-width: 1270px) {
+      @media only screen and (max-width: 768px) {
         rotate: -7deg;
       }
     }
@@ -155,7 +165,7 @@ export const PortfolioBottom = styled.div`
       font-weight: 400;
       font-style: normal;
       rotate: -1deg;
-      @media only screen and (max-width: 1270px) {
+      @media only screen and (max-width: 768px) {
         rotate: -7deg;
       }
     }

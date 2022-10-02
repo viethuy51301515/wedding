@@ -1,5 +1,4 @@
 import React, { useEffect, useRef,useState } from "react";
-import { HeaderImage } from "../header/Header.styled";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import {
@@ -11,8 +10,9 @@ import {
 } from "./countdown.styled";
 import { getRatio } from "../../utils/animation";
 import moment from 'moment';
-import {differenceInDays,sub} from 'date-fns';
+import { useSelector } from "react-redux";
 const CountDown = () => {
+  const timer = useSelector(state => state.timer);
   const [dateLeft,setDateLeft] = useState({
     days:0,
     hours:0,
@@ -76,8 +76,8 @@ const CountDown = () => {
     }
   }, []);
   return (
-    <CountDownStyled id="countdown-header" ref={ref}>
-      <CountDownBackground id="countdown-bg" />
+    <CountDownStyled id="countdown-header" ref={ref} >
+      <CountDownBackground id="countdown-bg" backgroundImg={timer}/>
       <CountDownContent>
         <CountDownTitle>
           <h2>

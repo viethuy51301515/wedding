@@ -2,7 +2,7 @@ import React from 'react';
 import { InformationLeft, InformationRight, InformationStyed } from './Information.styled';
 import InformationLine from './InformationLine';
 
-const Information = () =>{
+const Information = ({backgroundImg1,backgroundImg2}) =>{
     const content = [
         {
             no:"one",
@@ -38,8 +38,8 @@ const Information = () =>{
         {content.map(item => <InformationLine no={item.no} text={item.text}/>)}
       </InformationLeft>
         <InformationRight>
-            <div></div>
-            <div></div>
+            <div style={{backgroundImage:`url(${backgroundImg1})`}}></div>
+            <div style={{backgroundImage:`url(${backgroundImg2})`}}></div>
             <div>
                 <p>xo, ashmadddI cannot wait to meet you, hug your neck, make you laugh, rattle off my best mom jokes, tell you my most embarrassing stories, show you some          dance moves, and of course give you some freakin' bomb ass photos!!! ;)</p>
                 <h3>xo, ash</h3>

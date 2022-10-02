@@ -10,7 +10,7 @@ export const PictureFrameStyled = styled.div`
     content: " ";
     background-size: cover;
     background-position: center;
-    background-image: url("background.jpg");
+    background-image: url("${(props) => props.backgroundImg}");
     position: absolute;
     top: 15px;
     left: 15px;

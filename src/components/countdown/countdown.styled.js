@@ -7,7 +7,7 @@ export const CountDownStyled = styled.div`
   position: relative;
 `;
 export const CountDownBackground = styled.div`
-  background-image: url("background.jpg");
+  background-image: url("${(props) => props.backgroundImg}");
   opacity: 0.4;
   background-size: cover;
   background-position: center;
@@ -31,17 +31,18 @@ export const CountDownContent = styled.div`
 `;
 export const CountDownTitle = styled.div`
   margin-right: 50px;
-  color: white;
   @media only screen and (max-width: 768px) {
     display: none;
   }
   h2 {
     font-size: 30px;
     font-family: "Aboreto", cursive;
+    color: white;
     span {
       font-size: 20px;
       display: block;
       margin-bottom: 10px;
+      color: white;
     }
   }
 `;

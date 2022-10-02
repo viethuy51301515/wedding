@@ -28,11 +28,14 @@ export const GalleryStyled = styled.div`
     :hover {
       rotate: 360deg;
     }
+    h3 {
+      margin: 0;
+    }
     &:before {
       content: " ";
       background-size: cover;
       background-position: center;
-      background-image: url("flower.png");
+      background-image: url("../flower.png");
       position: absolute;
       top: 0;
       left: 0;
@@ -48,6 +51,9 @@ export const GalleryStyled = styled.div`
     :hover {
       rotate: 0deg;
     }
+    h3 {
+      margin: 0;
+    }
   }
   .gallery-card__3 {
     rotate: -6deg;
@@ -56,11 +62,14 @@ export const GalleryStyled = styled.div`
     :hover {
       rotate: 0deg;
     }
+    h3 {
+      margin: 0;
+    }
     &:before {
       content: " ";
       background-size: cover;
       background-position: center;
-      background-image: url("paper3.png");
+      background-image: url("../paper3.png");
       position: absolute;
       top: 0;
       left: 20%;
@@ -82,6 +91,7 @@ export const GalleryStyled = styled.div`
       font-family: "Libre Baskerville";
       font-weight: 400;
       font-style: normal;
+      margin: 0;
     }
   }
 `;

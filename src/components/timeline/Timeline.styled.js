@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { colors } from "../../utils/constant";
 
 export const TimelineStyled = styled.div`
-  background-image: url("bg.jpg");
+  background-image: url("${(props) => props.backgroundImg}");
   padding: 120px 0;
   text-align: center;
 `;

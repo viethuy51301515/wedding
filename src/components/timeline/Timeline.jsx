@@ -3,6 +3,7 @@ import { TimelineData } from '../../asset/timelinedata';
 import  HeartIcon  from '../../icon/heart';
 import {TimeLineSectionStyled, TimelineRowContentStyled, TimelineRowImageStyled, TimelineRowStyled, TimelineStyled, TimelineTitleStyled } from './Timeline.styled';
 const Timeline = ()=>{
+
     return(
         <TimelineStyled>
             <TimelineTitleStyled>

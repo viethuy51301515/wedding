@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const InformationStyed = styled.div`
-  background-image: url("background.png");
+  background-image: url("../background.png");
   padding-top: 30px;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@ export const InformationStyed = styled.div`
 export const InformationRight = styled.div`
   position: relative;
   width: 420px;
-  height: 330px;
+  height: 585px;
   div:nth-child(1) {
     background-image: url("background2.jpg");
     background-size: cover;
@@ -39,7 +39,7 @@ export const InformationRight = styled.div`
       left: 0;
       bottom: -10px;
       width: 30px;
-      background-image: url("golden-tape-3.png");
+      background-image: url("../golden-tape-3.png");
       background-size: cover;
       background-position: center;
       z-index: 4;
@@ -51,7 +51,7 @@ export const InformationRight = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("ink_splatters-02.png");
+      background-image: url("../ink_splatters-02.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 50% 50%;
@@ -82,7 +82,7 @@ export const InformationRight = styled.div`
 `;
 export const InformationLeft = styled.div`
   padding-top: 60px;
-  margin-right: 20px;
+  margin: 0 20px;
 `;
 export const InformationLineStyled = styled.div`
   display:flex;
@@ -141,8 +141,11 @@ export const DestinationTagStyled = styled.div`
   }
 `;
 export const InvitationStyled = styled.div`
-  background-image: url("background.png");
+  background-image: url("../background.png");
   padding: 50px 100px 50px 100px;
+  @media only screen and (max-width: 768px) {
+    padding: 50px 50px 50px 50px;
+  }
   .form-fields {
     width: 100%;
     margin-bottom: 15px;
@@ -169,5 +172,25 @@ export const InvitationStyled = styled.div`
         box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 6px #ce8483;
       }
     }
+  }
+  input[type="submit"] {
+    color: white;
+    background-color: #3fcfcb;
+    border-color: #3fcfcb;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    outline: none;
+    border: 1px solid transparent;
   }
 `;
