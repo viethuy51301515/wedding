@@ -25,8 +25,8 @@ const Event = () => {
   ]
   return <EventStyled>
           {data.map(item => 
-              <Link to={`/destination/${item.url}`} style={{pointerEvents:item.url !== "prewedding" && "none"}}>
-                <EventItem>
+              <Link key={item.url} to={`/destination/${item.url}`} style={{pointerEvents:item.url !== "prewedding" && "none"}}>
+                <EventItem >
                   { item.url === "prewedding"  && <ClickMe />}
                   <EventItemImage>
                     <div>

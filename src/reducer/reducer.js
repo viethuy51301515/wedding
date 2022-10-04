@@ -15,6 +15,7 @@ const initialState = {
     wedding: [],
   },
   stories: [],
+  data: {},
 };
 
 export default function UserReducer(state = initialState, action) {
@@ -49,6 +50,11 @@ export default function UserReducer(state = initialState, action) {
       return {
         ...state,
         stories: action.payload.stories,
+      };
+    case ACTION_TYPE.SET_DATA:
+      return {
+        ...state,
+        data: action.payload.data,
       };
     default:
       break;

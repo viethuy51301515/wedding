@@ -4,6 +4,7 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import {
   fetchAbout,
   fetchBackground,
+  fetchData,
   fetchGallery,
   fetchPlaces,
   fetchStory,
@@ -28,7 +29,11 @@ const Wrapper = () => {
   return (
     <div>
       <Tag />
-      <Header imageUrl={store.background} />
+      <Header
+        imageUrl={store.background}
+        title={store.data?.slogan?.first}
+        content={store.data?.slogan?.second}
+      />
       <Portfolio />
       <CountDown />
 
@@ -43,6 +48,7 @@ const Wrapper = () => {
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(fetchData());
     dispatch(fetchBackground());
     dispatch(fetchAbout());
     dispatch(fetchTimer());

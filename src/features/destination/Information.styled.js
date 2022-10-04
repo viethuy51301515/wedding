@@ -13,7 +13,7 @@ export const InformationRight = styled.div`
   width: 420px;
   height: 585px;
   div:nth-child(1) {
-    background-image: url("background2.jpg");
+    background-image: url("../background2.jpg");
     background-size: cover;
     background-position: center;
     width: 250px;
@@ -22,7 +22,7 @@ export const InformationRight = styled.div`
     z-index: 2;
   }
   div:nth-child(2) {
-    background-image: url("background.jpg");
+    background-image: url("../background.jpg");
     background-size: cover;
     background-position: center;
     width: 250px;
@@ -87,7 +87,7 @@ export const InformationLeft = styled.div`
 export const InformationLineStyled = styled.div`
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
   margin-bottom:30px;
   
   h1:nth-child(1) {

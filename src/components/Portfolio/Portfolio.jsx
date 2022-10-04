@@ -9,7 +9,7 @@ import PictureFrame from "../pictureFrame/PictureFrame";
 import { useSelector } from "react-redux";
 
 const Portfolio = () => {
-  const about = useSelector(state => state.about);
+  const {about,data} = useSelector(state => state);
   return (
     <PortfolioContainer>
         <PortfolioStyled className="contain">
@@ -19,10 +19,10 @@ const Portfolio = () => {
               </div>
               <div>
                 <h1>
-                I am a couples and wedding photographer cozied up in the Blue Ridge Mountains of NC.
+                {data.Introduction?.title}
                 </h1>
                 <p>
-                When I am not out frolicking, adventuring, and dancing on mountain tops with my crazy, amazing couples... you can likely find me somewhere outdoors, wrangling my two sweet babies, snowboarding with the hubs, grabbing a beer with friends, or in the Chick Fil A drive thru... AGAIN. 
+                {data.Introduction?.description}
                 </p>
                 <div className="stamp" />
               </div>
@@ -31,9 +31,9 @@ const Portfolio = () => {
             <PortfolioBottom>
                 <div className="note-1-container"> 
                   <div className="note-1">
-                    <h1>my style and approach is far from ordinary... </h1>
+                    <h1>  {data.Introduction?.title2}</h1>
                     <p>
-                    It's not traditional. It's not posed. It's not staged. It thrives on movement, connection, and emotion. I always like to get to know each of my couples on a deeper, more personal level so, that when you do step in front of my camera for the first time... you know me, you trust me, you feel comfortable with me... so much so that letting me into your lives, your story, and your love comes easy and naturally.
+                    {data.Introduction?.description2}
                     </p>
                   </div>
                 </div>

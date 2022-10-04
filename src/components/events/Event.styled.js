@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const EventStyled = styled.div`
-  background-image: url("background.png");
+  background-image: url("../background.png");
   padding: 120px 0;
   text-align: center;
   display: flex;
@@ -20,6 +20,8 @@ export const EventItem = styled.div`
     filter: grayscale(0);
     .event-image {
       transform: scale(1.2);
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
     }
   }
 `;
@@ -54,11 +56,13 @@ export const EventItemImage = styled.div`
     overflow: hidden;
     > div {
       transition: 0.5s all;
-      background-image: url("timeline.jpg");
+      background-image: url("../timeline.jpg");
       background-size: cover;
       background-position: center;
       height: 100%;
       width: 100%;
+      border-top-left-radius: 50%;
+      border-top-right-radius: 50%;
     }
   }
 `;

@@ -8,7 +8,6 @@ const Invitation = () => {
     const { register, handleSubmit } = useForm();
     const [show,setShow]= useState(false);
     const onSubmit = data => {
-        console.log(JSON.stringify(data));
         setShow(true);
         fetch(scriptUrl, {method: 'POST',headers:{"Content-Type":"application/json"}, body: JSON.stringify(data)})
     };

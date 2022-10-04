@@ -79,7 +79,7 @@ export const AboutImageStyled = styled.div`
     content: " ";
     background-size: cover;
     background-position: center;
-    background-image: url("paper2.png");
+    background-image: url("../paper2.png");
     width: 217px;
     height: 155px;
     position: absolute;
@@ -93,7 +93,7 @@ export const AboutImageStyled = styled.div`
     position: absolute;
     background-size: cover;
     background-position: center;
-    background-image: url("ink_splatters-01.png");
+    background-image: url("../ink_splatters-01.png");
     height: 160px;
     width: 160px;
     bottom: 0;

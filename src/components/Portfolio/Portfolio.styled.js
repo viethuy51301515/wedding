@@ -7,7 +7,7 @@ export const PortfolioContainer = styled.div`
 
 export const PortfolioStyled = styled.div`
   width: 100%;
-  background-image: url("background.png");
+  background-image: url("../background.png");
   position: relative;
 `;
 
@@ -35,7 +35,7 @@ export const PortfolioTop = styled.div`
         content: " ";
         background-size: cover;
         background-position: center;
-        background-image: url("paper2.png");
+        background-image: url("../paper2.png");
         position: absolute;
         left: -78px;
         bottom: 15px;
@@ -73,7 +73,7 @@ export const PortfolioTop = styled.div`
     .stamp {
       background-size: cover;
       background-position: center;
-      background-image: url("stamp.png");
+      background-image: url("../stamp.png");
       position: absolute;
       width: 210px;
       height: 369px;
@@ -134,7 +134,7 @@ export const PortfolioBottom = styled.div`
   .note-1 {
     background-size: cover;
     background-position: center;
-    background-image: url("paper.png");
+    background-image: url("../paper.png");
     width: 100%;
     padding: 40px;
     position: absolute;
@@ -176,7 +176,7 @@ export const PortfolioBottom = styled.div`
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url("background.jpg");
+    background-image: url("../background.jpg");
     z-index: 2;
     left: 0;
   }
@@ -186,14 +186,14 @@ export const PortfolioBottom = styled.div`
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-image: url("background2.jpg");
+    background-image: url("../background2.jpg");
     z-index: 2;
     top: 8%;
     &:before {
       content: " ";
       background-size: cover;
       background-position: center;
-      background-image: url("tape.png");
+      background-image: url("../tape.png");
       position: absolute;
       top: 0;
       right: 0;
@@ -206,7 +206,7 @@ export const PortfolioBottom = styled.div`
       content: " ";
       background-size: cover;
       background-position: center;
-      background-image: url("rib.png");
+      background-image: url("../rib.png");
       position: absolute;
       left: 0;
       top: 0;
@@ -220,7 +220,7 @@ export const PortfolioBottom = styled.div`
   .ink1 {
     background-size: cover;
     background-position: center;
-    background-image: url("ink_splatters-01.png");
+    background-image: url("../ink_splatters-01.png");
     width: 125px;
     height: 125px;
     position: absolute;

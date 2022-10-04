@@ -7,6 +7,8 @@ import {
   fetchTimerImage,
 } from "../api/api";
 
+import { getData } from "../api/database";
+
 export const ACTION_TYPE = {
   SEARCH_SUCCESS: "SEARCH_SUCCESS",
   SEARCH_ERROR: "SEARCH_ERROR",
@@ -18,6 +20,7 @@ export const ACTION_TYPE = {
   SET_PLACES: "SET_PLACES",
   SET_GALLERY: "SET_GALLERY",
   SET_STORY: "SET_STORY",
+  SET_DATA: "SET_DATA",
 };
 
 export function fetchBackgroundSuccess(payload) {
@@ -58,6 +61,13 @@ export function fetchGallerySuccess(payload) {
 export function fetchStoriesSuccess(payload) {
   return {
     type: ACTION_TYPE.SET_STORY,
+    payload,
+  };
+}
+
+export function fetchDataSuccess(payload) {
+  return {
+    type: ACTION_TYPE.SET_DATA,
     payload,
   };
 }
@@ -111,6 +121,15 @@ export function fetchStory() {
     try {
       const users = await fetchStoriesImage();
       dispatch(fetchStoriesSuccess(users));
+    } catch (error) {}
+  };
+}
+
+export function fetchData() {
+  return async (dispatch) => {
+    try {
+      const data = await getData();
+      dispatch(fetchDataSuccess(data));
     } catch (error) {}
   };
 }

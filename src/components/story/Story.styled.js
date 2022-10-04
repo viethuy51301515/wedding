@@ -32,7 +32,7 @@ export const StoryImageSlider = styled.div`
     content: " ";
     background-size: cover;
     background-position: center;
-    background-image: url("tape.png");
+    background-image: url("../tape.png");
     position: absolute;
     top: 0;
     left: 0;
@@ -46,7 +46,7 @@ export const StoryImageSlider = styled.div`
     content: " ";
     background-size: cover;
     background-position: center;
-    background-image: url("rib2.png");
+    background-image: url("../rib2.png");
     position: absolute;
     left: 0;
     top: 0;
@@ -58,7 +58,7 @@ export const StoryImageSlider = styled.div`
   .ink {
     background-size: cover;
     background-position: center;
-    background-image: url("ink_splatters.png");
+    background-image: url("../ink_splatters.png");
     width: 400px;
     height: 100%;
     position: absolute;
@@ -145,7 +145,7 @@ export const StoryImageContent = styled.div`
   .arrow {
     background-size: cover;
     background-position: center;
-    background-image: url("rough_arrow.png");
+    background-image: url("../rough_arrow.png");
     position: absolute;
     width: 125px;
     height: 105px;

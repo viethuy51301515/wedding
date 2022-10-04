@@ -32,12 +32,11 @@ const Header = ({title,content,imageUrl}) => {
       <HeaderImage id="background" backgroundImg={imageUrl}></HeaderImage>
       <HeaderContent id="content">
         <div>
-          <h1>ALISABETH DESIGNS</h1>
+          <h1>{title}</h1>
         </div>
         <div>
           <h2>
-            A BRANDING & WEB DESIGN BOUTIQUE CREATING EXQUISITE DESIGNS FOR
-            WEDDING INDUSTRY PROS
+            {content}
           </h2>
         </div>
       </HeaderContent>
