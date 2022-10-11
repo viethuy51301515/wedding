@@ -7,7 +7,12 @@ export const fetchBackgroundImg = async () => {
   await getDownloadURL(pathReference).then((res) => (data["background"] = res));
   return data;
 };
-
+export const fetchFooterImg = async () => {
+  const data = {};
+  const pathReference = ref(storeImage, "background/footer.jpg");
+  await getDownloadURL(pathReference).then((res) => (data["footer"] = res));
+  return data;
+};
 export const fetchAboutImage = async () => {
   const data = {};
   await listAll(ref(storeImage, "about")).then(async (res) => {

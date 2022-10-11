@@ -16,6 +16,9 @@ export const TagStyled = styled.div`
     background-size: cover;
     width: 100%;
     height: calc(100% - 32px);
+    @media (max-width: 768px) {
+      height: calc(100% - 20px);
+    }
   }
   div:nth-child(2) {
     width: 100%;

@@ -8,7 +8,7 @@ const Information = ({backgroundImg1,backgroundImg2,content =[],description,name
     ]
     return <InformationStyed>
       <InformationLeft>
-        {content.map( (item,index) => <InformationLine no={contentNumber[index]} text={item}/>)}
+        {content.map( (item,index) => <InformationLine key={index+item} no={contentNumber[index]} text={item}/>)}
       </InformationLeft>
         <InformationRight>
             <div style={{backgroundImage:`url(${backgroundImg1})`}}></div>

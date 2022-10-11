@@ -8,6 +8,7 @@ import Event from "./events/Event";
 import PictureFrame from "./pictureFrame/PictureFrame";
 import Gallery from "./gallery/Gallery";
 import Story from "./story/Story";
+import ToastComponent from "./Toast/Toast";
 export {
   Header,
   Footer,
@@ -19,4 +20,5 @@ export {
   PictureFrame,
   Gallery,
   Story,
+  ToastComponent,
 };

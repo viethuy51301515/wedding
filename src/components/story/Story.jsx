@@ -3,14 +3,14 @@ import { useSelector } from "react-redux";
 import { StoryContainer,StoryImageSlider,StoryImageContent } from "./Story.styled";
 const Story = ()=>{
     const {stories,data} = useSelector(state => state);
-    const dataItem = data.stories ? data.stories?.map( (item,index) => {
+    const dataItem = data.stories ? data.stories?.filter(item => !!item).map( (item,index) => {
         let imgIndex = index >= stories.length ? stories.length - 1 : index;
         return {
             content:item.description,
             name:item.name,
             image:stories[imgIndex]
         }
-    }).filter(item => !!item) :[] ;
+    }) :[] ;
     const [currentPage,setCurrentPage] = useState(0);
 
     const goRight = ()=>{
@@ -28,10 +28,10 @@ const Story = ()=>{
             <StoryImageContent>
                 <div>
                     <p>{dataItem[currentPage].content}</p>
-                    <h3>-{dataItem[currentPage].name}</h3>
+                    <h3>{dataItem[currentPage].name}</h3>
                 </div>
                 <div>
-                    I'm Here For It Sis
+                    OUR FUN FACTS
                 </div>
                 {/* <div className="content__title">
                     <h2>kindest words from the sweetest people</h2>

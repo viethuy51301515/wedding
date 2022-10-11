@@ -2,6 +2,7 @@ import { ACTION_TYPE } from "../action/action";
 
 const initialState = {
   background: "",
+  footer: "",
   about: [],
   timer: "",
   places: {
@@ -55,6 +56,11 @@ export default function UserReducer(state = initialState, action) {
       return {
         ...state,
         data: action.payload.data,
+      };
+    case ACTION_TYPE.SET_FOOTER:
+      return {
+        ...state,
+        footer: action.payload.footer,
       };
     default:
       break;

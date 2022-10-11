@@ -82,12 +82,12 @@ export const StoryImageContent = styled.div`
     top:0;
     left:60px;
     right:60px;
-    transform: translate(0,-30%);
+    transform: translate(0,-20%);
   }
   > div:nth-child(1) {
-    padding: 50px;
+    padding: 40px 20px;
     width: 100%;
-    height:300px;
+    min-height:300px;
     box-sizing: border-box;
     transition: all 0.5s ease;
     p {
@@ -96,7 +96,7 @@ export const StoryImageContent = styled.div`
       letter-spacing: 0em;
       font-size: 14px;
       text-align: justify;
-      font-family: "Libre Baskerville", serif;
+      font-family: "Merriweather", serif;
       font-weight: 400;
       font-style: normal;
       margin:0;
@@ -108,7 +108,7 @@ export const StoryImageContent = styled.div`
       letter-spacing: 0.1em;
       font-size: 16px;
       text-align: left;
-      font-family: "Sen", sans-serif;
+      font-family: "Merriweather", serif;
       font-weight: 400;
       font-style: normal;
       text-align: right;
@@ -123,7 +123,7 @@ export const StoryImageContent = styled.div`
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-size: 16px;
-    font-family: "Sen", sans-serif;
+    font-family: "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
     display:flex;

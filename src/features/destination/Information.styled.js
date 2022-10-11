@@ -2,10 +2,13 @@ import styled from "styled-components";
 
 export const InformationStyed = styled.div`
   background-image: url("../background.png");
-  padding-top: 30px;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  @media only screen and (max-width: 1180px) {
+    padding-bottom: 150px;
+  }
 `;
 
 export const InformationRight = styled.div`
@@ -64,9 +67,9 @@ export const InformationRight = styled.div`
     position: absolute;
     background-color: rgba(250, 243, 237, 1);
     top: 0;
-    transform: translate(0, 100%);
+    transform: translate(0, 80%);
     rotate: 2deg;
-    padding: 120px 20px 20px 20px;
+    padding: 120px 30px 20px 30px;
     z-index: 1;
     p {
       color: rgba(37, 25, 16, 1);
@@ -74,9 +77,12 @@ export const InformationRight = styled.div`
       letter-spacing: 0em;
       font-size: 14px;
       text-align: justify;
-      font-family: "Libre Baskerville";
+      font-family: "Merriweather", serif;
       font-weight: 400;
       font-style: normal;
+    }
+    h3 {
+      float: right;
     }
   }
 `;
@@ -87,14 +93,18 @@ export const InformationLeft = styled.div`
 export const InformationLineStyled = styled.div`
   display:flex;
   justify-content:center;
+  gap:5px;
   align-items:flex-start;
   margin-bottom:30px;
-  
+  width:600px;
+  @media only screen and (max-width: 768px) {
+    width:100%;
+  }
   h1:nth-child(1) {
     line-height: 1.2;
     letter-spacing: 0em;
     font-size: 28px;
-    font-family: "Sen", sans-serif;
+    font-family: "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
     color: rgba(37, 25, 16, 1);
@@ -117,26 +127,31 @@ export const InformationLineStyled = styled.div`
 
 export const DestinationTagStyled = styled.div`
   width: 100vw;
-  height: 100px;
   background-color: rgba(108, 134, 133, 1);
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding: 10px 20px;
   h1 {
     color: rgba(255, 255, 255, 1);
     font-size: 28px;
     text-align: center;
-    font-family: "Sen", sans-serif;
+    font-family: "Alex Brush", cursive;
     font-weight: 400;
     font-style: normal;
     max-width: 300px;
-    span {
-      color: rgba(255, 255, 255, 1);
-      line-height: 0.6;
-      font-size: 40px;
-      font-family: "Alex Brush", cursive;
-      font-weight: 400;
-      font-style: normal;
+    padding-bottom: 10px;
+  }
+  span {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    @media only screen and (max-width: 768px) {
+      font-size: 10px;
     }
   }
 `;
@@ -152,13 +167,71 @@ export const InvitationStyled = styled.div`
     label {
       display: block;
       margin-bottom: 5px;
-      font-weight: 400;
+      font-weight: 700;
+      font-family: "Merriweather", serif;
+    }
+    .sub-fields {
+      padding-left: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      cursor: pointer;
+      &:hover input:not(:checked) ~ .radio {
+        opacity: 0.8;
+      }
+      label {
+        display: inline;
+        padding-left: 20px;
+        font-weight: 400;
+        font-family: "Merriweather", serif;
+        cursor: pointer;
+      }
+      input[type="radio"] {
+        position: absolute;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        left: -2000px;
+        &:checked {
+          ~ .checkmark {
+            background-color: rgba(108, 134, 133);
+            transition: background 0.3s;
+            &::after {
+              opacity: 1;
+            }
+          }
+          ~ label {
+            color: rgba(108, 134, 133);
+          }
+        }
+      }
+      .checkmark {
+        position: absolute;
+        top: 0.2rem;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background: #c9ded6;
+        border-radius: 50%;
+        &::after {
+          content: "";
+          position: absolute;
+          opacity: 0;
+          width: 10px;
+          height: 10px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
     }
     input[type="text"] {
       outline: none;
       width: 100%;
       color: #292929;
       border-radius: 10px;
+      font-family: "Merriweather", serif;
       font-size: 15px;
       font-weight: 400;
       height: 34px;

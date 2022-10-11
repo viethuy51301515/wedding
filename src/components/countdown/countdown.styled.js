@@ -36,7 +36,7 @@ export const CountDownTitle = styled.div`
   }
   h2 {
     font-size: 30px;
-    font-family: "Aboreto", cursive;
+    font-family: "Merriweather", serif;
     color: white;
     span {
       font-size: 20px;
@@ -53,7 +53,7 @@ export const CountDownTimerStyled = styled.div`
   > div {
     text-align: center;
     width: 100px;
-    font-family: "Dosis", sans-serif;
+    font-family: "Merriweather", serif;
     font-size: 3rem;
     color: white;
     div {

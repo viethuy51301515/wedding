@@ -4,6 +4,7 @@ export const AboutStyed = styled.div`
   background-color: rgba(108, 134, 133, 1);
   position: relative;
   display: grid;
+  column-gap: 10px;
   grid-template-areas: ". left-content right-content";
   padding: 100px 50px 100px 300px;
   @media (max-width: 768px) {
@@ -28,7 +29,7 @@ export const AboutStyed = styled.div`
       color: rgba(255, 255, 255, 1);
       font-size: 28px;
       text-align: center;
-      font-family: "Sen", sans-serif;
+      font-family: "Merriweather", serif;
       font-weight: 400;
       font-style: normal;
       max-width: 300px;
@@ -49,7 +50,7 @@ export const AboutStyed = styled.div`
       letter-spacing: 0em;
       font-size: 14px;
       text-align: justify;
-      font-family: "Libre Baskerville";
+      font-family: "Merriweather", serif;
       font-weight: 400;
       font-style: normal;
       color: rgba(255, 255, 255, 1);

@@ -1,9 +1,11 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { FooterStyled } from "./Footer.styled";
 
 const Footer = () => {
-  return <FooterStyled>
-    <h1>One Another Forever</h1>
+  const store = useSelector((state) => state);
+  return <FooterStyled bkImage={store.footer}>
+
   </FooterStyled>;
 };
 

@@ -7,14 +7,14 @@ import { GalleryStyled } from './Gallery.styled';
 const Gallery = ()=>{
     const gallery = useSelector(state => state.gallery)
     return <GalleryStyled>
-        <Link to="/album?pre_wedding">
-            <PictureFrame  backgroundImg={gallery.prewedding[0]} className={'gallery-card gallery-card__1'} caption={'Life Style'} width="350px" height="400px"/>
+        <Link>
+            <PictureFrame  backgroundImg={gallery.prewedding[0]} className={'gallery-card gallery-card__1'} caption={'Gallery…'} width="350px" height="400px"/>
         </Link>
-        <Link to="/album?pre_wedding">
-            <PictureFrame backgroundImg={gallery.ceremony[0]} className={'gallery-card gallery-card__2'} caption={'Life Style'} width="350px" height="400px"/>
+        <Link>
+            <PictureFrame backgroundImg={gallery.ceremony[0]} className={'gallery-card gallery-card__2'} caption={'…is coming…'} width="350px" height="400px"/>
         </Link>
-        <Link to="/album?pre_wedding">
-            <PictureFrame backgroundImg={gallery.wedding[0]} className={'gallery-card gallery-card__3'} caption={'Life Style'} width="350px" height="400px"/>
+        <Link>
+            <PictureFrame backgroundImg={gallery.wedding[0]} className={'gallery-card gallery-card__3'} caption={' …soon!'} width="350px" height="400px"/>
         </Link>
     </GalleryStyled>
 }

@@ -19,7 +19,9 @@ const Destination = () =>{
     
     return <div>
         <Tag />
-        <Header imageUrl={images[0]} title={currentData.header?.title1} content={currentData.header?.title2} />
+        <Header imageUrl={images[0]}
+            mbImage={"https://firebasestorage.googleapis.com/v0/b/wedding-64f5e.appspot.com/o/background%2Fdalatbackground.jpg?alt=media&token=360f392e-d2ce-44b9-9548-27c78e7e681d"}
+         title={currentData.header?.title1} content={currentData.header?.title2} />
         <About aboutImg={images[1]} 
             title1={currentData.description?.title1} 
             title2={currentData.description?.title2} 
@@ -27,10 +29,10 @@ const Destination = () =>{
             content2={currentData.description?.content2} 
         />
         <Information backgroundImg1={images[2]}
-backgroundImg2={images[3]} 
-content={currentData.programs}
-description={currentData.article?.description}
-name={currentData.article?.name}/>
+            backgroundImg2={images[3]} 
+            content={currentData.programs}
+            description={currentData.article?.description}
+            name={currentData.article?.name}/>
         <DestinationTag />
         <Invitation />
         <Footer />

@@ -5,6 +5,7 @@ import {
   fetchAbout,
   fetchBackground,
   fetchData,
+  fetchFooter,
   fetchGallery,
   fetchPlaces,
   fetchStory,
@@ -33,6 +34,11 @@ const Wrapper = () => {
         imageUrl={store.background}
         title={store.data?.slogan?.first}
         content={store.data?.slogan?.second}
+        mbImage={
+          "https://firebasestorage.googleapis.com/v0/b/wedding-64f5e.appspot.com/o/background%2FmobileBackground.jpg?alt=media&token=58fb7a32-a5bc-43e1-a2c7-1607b7f44fab"
+        }
+        isHaveName={true}
+        isMain={true}
       />
       <Portfolio />
       <CountDown />
@@ -50,6 +56,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchData());
     dispatch(fetchBackground());
+    dispatch(fetchFooter());
     dispatch(fetchAbout());
     dispatch(fetchTimer());
     dispatch(fetchPlaces());

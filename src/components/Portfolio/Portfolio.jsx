@@ -19,10 +19,11 @@ const Portfolio = () => {
               </div>
               <div>
                 <h1>
-                {data.Introduction?.title}
+                {data.Introduction?.title.split(" - ")[0]}
+                <span> - {data.Introduction?.title.split(" - ")[1]}</span>
                 </h1>
                 <p>
-                {data.Introduction?.description}
+                {data.Introduction?.description.split("<br>").map(text => <> {text} <br /><br /></>  )}
                 </p>
                 <div className="stamp" />
               </div>

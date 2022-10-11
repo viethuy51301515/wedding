@@ -58,6 +58,7 @@ export const PortfolioTop = styled.div`
       font-weight: 400;
       font-style: normal;
       margin-bottom: 40px;
+      font-family: "Merriweather", serif;
     }
     p {
       color: rgba(37, 25, 16, 1);
@@ -68,7 +69,7 @@ export const PortfolioTop = styled.div`
       font-weight: 400;
       font-style: normal;
       width: 80%;
-      font-family: "Libre Baskerville", serif;
+      font-family: "Merriweather", serif;
     }
     .stamp {
       background-size: cover;
@@ -89,7 +90,7 @@ export const PortfolioTop = styled.div`
 export const PortfolioBottom = styled.div`
   display: grid;
   width: 100%;
-  padding-bottom: 60px;
+  padding-bottom: 130px;
   grid-template-areas: "note1 note2 note3";
   @media only screen and (max-width: 1270px) {
     grid-template-areas:
@@ -136,7 +137,8 @@ export const PortfolioBottom = styled.div`
     background-position: center;
     background-image: url("../paper.png");
     width: 100%;
-    padding: 40px;
+    padding: 20px;
+    margin-top: 10px;
     position: absolute;
     top: 5%;
     left: 0;
@@ -156,11 +158,11 @@ export const PortfolioBottom = styled.div`
       }
     }
     p {
-      font-family: "Libre Baskerville", serif;
+      font-family: "Merriweather", serif;
       color: rgba(37, 25, 16, 1);
       line-height: 1.8;
       letter-spacing: 0em;
-      font-size: 14px;
+      font-size: 18px;
       text-align: justify;
       font-weight: 400;
       font-style: normal;

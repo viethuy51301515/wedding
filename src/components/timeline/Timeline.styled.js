@@ -10,7 +10,7 @@ export const TimelineStyled = styled.div`
 export const TimelineTitleStyled = styled.div`
   margin-bottom: 60px;
   h1 {
-    font-family: "Great Vibes", cursive;
+    font-family: "Merriweather", serif;
     background: white;
     padding: 10px 25px 5px;
     text-transform: capitalize;
@@ -24,7 +24,7 @@ export const TimelineTitleStyled = styled.div`
 `;
 
 export const TimeLineSectionStyled = styled.div`
-  font-family: "Dosis", sans-serif;
+  font-family: "Merriweather", serif;
   position: relative;
   ::after {
     content: " ";

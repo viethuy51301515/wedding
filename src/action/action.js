@@ -1,6 +1,7 @@
 import {
   fetchAboutImage,
   fetchBackgroundImg,
+  fetchFooterImg,
   fetchGalleryImage,
   fetchPlacesImage,
   fetchStoriesImage,
@@ -21,11 +22,19 @@ export const ACTION_TYPE = {
   SET_GALLERY: "SET_GALLERY",
   SET_STORY: "SET_STORY",
   SET_DATA: "SET_DATA",
+  SET_FOOTER: "SET_FOOTER",
 };
 
 export function fetchBackgroundSuccess(payload) {
   return {
     type: ACTION_TYPE.SET_BACKGROUND,
+    payload,
+  };
+}
+
+export function fetchFooterSuccess(payload) {
+  return {
+    type: ACTION_TYPE.SET_FOOTER,
     payload,
   };
 }
@@ -80,6 +89,16 @@ export function fetchBackground() {
     } catch (error) {}
   };
 }
+
+export function fetchFooter() {
+  return async (dispatch) => {
+    try {
+      const users = await fetchFooterImg();
+      dispatch(fetchFooterSuccess(users));
+    } catch (error) {}
+  };
+}
+
 export function fetchAbout() {
   return async (dispatch) => {
     try {

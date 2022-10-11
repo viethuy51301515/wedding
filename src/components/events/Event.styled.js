@@ -7,6 +7,7 @@ export const EventStyled = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 `;
 export const EventItem = styled.div`
   width: 300px;
@@ -27,17 +28,28 @@ export const EventItem = styled.div`
 `;
 
 export const EventItemContent = styled.div`
-  max-width: 100%;
+  width: 100%;
   background-color: rgba(181, 155, 131, 1);
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 100px 10px 20px 10px;
   top: 50%;
-  > img {
-    max-width: 100%;
-    height: auto;
+  h3 {
+    color: white;
+    font-family: "Merriweather", serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+  }
+  h2 {
+    color: white;
+    font-family: "Alex Brush", cursive;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
   }
 `;
 

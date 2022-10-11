@@ -16,3 +16,7 @@ code {
 html{
   overflow-x: hidden;
 }
+.toast-container{
+  font-family: "Merriweather", serif;
+  z-index:100;
+}
