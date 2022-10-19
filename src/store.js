@@ -21,5 +21,6 @@ let store = createStore(
     ? composeWithDevTools(applyMiddleware(thunk))
     : applyMiddleware(thunk)
 );
+
 let persistor = persistStore(store);
 export { store, persistor };
