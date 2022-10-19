@@ -17,7 +17,9 @@ const persistedReducer = persistReducer(persistConfig, UserReducer);
 
 let store = createStore(
   persistedReducer,
-  composeWithDevTools(applyMiddleware(thunk))
+  process.env.NODE_ENV !== "production"
+    ? composeWithDevTools(applyMiddleware(thunk))
+    : applyMiddleware(thunk)
 );
 let persistor = persistStore(store);
 export { store, persistor };
