@@ -8,10 +8,10 @@ const PictureFrame = ({className,caption,width,height,backgroundImg}) => {
   return <PictureFrameStyled backgroundImg={backgroundImg} className={className} isHaveCaption = {!!caption} 
     width={width}
     height={height}
-    onClick={ () => {setIsShow(true)}}
+    //onClick={ () => {setIsShow(true)}}
   >
     {caption && <h3>{caption}</h3>}
-    <ToastComponent show={isShow} setShow={setIsShow} content={"Gallery is coming soon !!"}/>
+    {/* <ToastComponent show={isShow} setShow={setIsShow} content={"Gallery is coming soon !!"}/> */}
   </PictureFrameStyled>;
 };
 

@@ -37,6 +37,28 @@ export const HeaderImage = styled.div`
   }
 `;
 
+export const HeaderVideo = styled.div`
+  background-image: url("${(props) => props.backgroundImg}");
+  background-size: cover;
+  background-position: center;
+  top: 0;
+  ${(props) =>
+    props.isMain &&
+    css`
+      opacity: 0.8;
+    `}
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  @media only screen and (max-width: 1180px) {
+    background-position: center !important;
+    background-image: url(${(props) => props.mobileImage});
+    opacity: 1;
+  }
+`;
+
 export const HeaderContent = styled.div`
   z-index: 1;
   text-align: center;
