@@ -57,12 +57,12 @@ const CountDown = () => {
       seconds = seconds - (minutes*60);
 
 
-      setDateLeft({
-        days: days,
-        hours: hours,
-        minutes: minutes,
-        seconds: seconds,
-      })
+      // setDateLeft({
+      //   days: days,
+      //   hours: hours,
+      //   minutes: minutes,
+      //   seconds: seconds,
+      // })
 
 
 
