@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import { HeaderContent, HeaderImage, HeaderStyled } from "./Header.styled";
+import { HeaderContent, HeaderStyled } from "./Header.styled";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { getRatio } from "../../utils/animation";
+import { useState } from "react";
 const Header = ({title,content,imageUrl,mbImage,isHaveName,isMain=false}) => {
   gsap.registerPlugin(ScrollTrigger);
   let refBack = useRef(null);
-
+  const[className,setClassName] = useState('');
   useEffect(() => {
     gsap.fromTo(
       "#background",
@@ -26,6 +27,10 @@ const Header = ({title,content,imageUrl,mbImage,isHaveName,isMain=false}) => {
         },
       }
     );
+    const timer = setTimeout(() => {
+      setClassName('hide-page');
+    }, 5000);
+    return ()=> clearTimeout(timer);
   }, []);
   return (
     <HeaderStyled id="header" ref={refBack}>
@@ -37,9 +42,8 @@ const Header = ({title,content,imageUrl,mbImage,isHaveName,isMain=false}) => {
         frameborder="0" 
         allowfullscreen
         style={{pointerEvents:'none',width:'100%',height:'100%',position:'absolute'}}
-        class='video'
         ></iframe>
-      <HeaderContent id="content" color={isMain ? "white" : "black"}>
+      <HeaderContent className={className} id="content" color={isMain ? "white" : "black"}>
         {
           isHaveName &&         <div><h2>H + T</h2> </div> 
         }

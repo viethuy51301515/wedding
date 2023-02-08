@@ -64,6 +64,11 @@ export const HeaderContent = styled.div`
   text-align: center;
   margin-bottom: 300px;
   color: ${(props) => props.color};
+  opacity:1;
+  transition:2s all;
+  &.hide-page{
+    opacity:0;
+  }
   @media only screen and (max-width: 1180px) {
     display: none;
     margin-bottom: 0;
