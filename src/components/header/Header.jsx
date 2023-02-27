@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { getRatio } from "../../utils/animation";
 import { useState } from "react";
+import { HeaderImage } from "./Header.styled";
 const Header = ({title,content,imageUrl,mbImage,isHaveName,isMain=false}) => {
   gsap.registerPlugin(ScrollTrigger);
   let refBack = useRef(null);
@@ -34,15 +35,15 @@ const Header = ({title,content,imageUrl,mbImage,isHaveName,isMain=false}) => {
   }, []);
   return (
     <HeaderStyled id="header" ref={refBack}>
-      {/* <HeaderImage id="background" backgroundImg={imageUrl} mobileImage={mbImage} isMain={isMain}></HeaderImage> */}
-      <iframe 
+      <HeaderImage id="background" backgroundImg={imageUrl} mobileImage={mbImage} isMain={isMain}></HeaderImage>
+      {/* <iframe 
         src="https://www.youtube.com/embed/5gE2fBr8Tn8?rel=0&modestbranding=1&autohide=1&mute=1&showinfo=0&controls=0&autoplay=1"
         title="2131231"  
         width="560" height="315"  
         frameborder="0" 
         allowfullscreen
         style={{pointerEvents:'none',width:'100%',height:'100%',position:'absolute'}}
-        ></iframe>
+        ></iframe> */}
       <HeaderContent className={className} id="content" color={isMain ? "white" : "black"}>
         {
           isHaveName &&         <div><h2>H + T</h2> </div> 
